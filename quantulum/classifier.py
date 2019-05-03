@@ -4,7 +4,7 @@
 """quantulum classifier functions."""
 
 # Standard library
-import regex as re
+import re
 import os
 import json
 import pickle
