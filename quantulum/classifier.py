@@ -4,7 +4,7 @@
 """quantulum classifier functions."""
 
 # Standard library
-import re
+import regex as re
 import os
 import json
 import pickle
@@ -56,8 +56,8 @@ def download_wiki():
 ###############################################################################
 def clean_text(text):
     """Clean text for TFIDF."""
-    new_text = re.sub(r'\p{P}+', ' ', text)
-
+    #new_text = re.sub('\\p{P}+', ' ', text)
+    new_text = re.sub(r'[^\w\s]',' ', text)
     new_text = [stem(i) for i in new_text.lower().split() if not
                 re.findall(r'[0-9]', i)]
 
@@ -98,19 +98,20 @@ def train_classifier(download=True, parameters=None, ngram_range=(1, 1)):
            'clf': clf,
            'target_names': target_names}
     path = os.path.join(l.TOPDIR, 'clf.pickle')
-    pickle.dump(obj, open(path, 'w'))
+    pickle.dump(obj, open(path, 'wb'))
 
 
 ###############################################################################
 def load_classifier():
     """Train the intent classifier."""
     path = os.path.join(l.TOPDIR, 'clf.pickle')
-    obj = pickle.load(open(path, 'r'))
-
+    obj = pickle.load(open(path, 'rb')) #, encoding='latin1'))
+    
     return obj['tfidf_model'], obj['clf'], obj['target_names']
 
 if USE_CLF:
-    TFIDF_MODEL, CLF, TARGET_NAMES = load_classifier()
+    pass
+    #TFIDF_MODEL, CLF, TARGET_NAMES = load_classifier()
 else:
     TFIDF_MODEL, CLF, TARGET_NAMES = None, None, None
 
