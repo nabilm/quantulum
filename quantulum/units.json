@@ -421,7 +421,7 @@
         "entity": "mass",
         "URI": "https://en.wikipedia.org/wiki/Ounce",
         "dimensions": [],
-        "symbols": ["oz", "℥"]
+        "symbols": ["oz", "℥", "ONZ"]
     },
     {
         "name": "ton",
@@ -693,7 +693,7 @@
         "entity": "volume",
         "URI": "https://en.wikipedia.org/wiki/Fluid_ounce",
         "dimensions": [],
-        "symbols": ["fl oz", "oz fl", "floz", "ozfl"]
+        "symbols": ["fl oz", "oz fl", "floz", "ozfl", "fl. oz."]
     },
     {
         "name": "tablespoon",
