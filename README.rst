@@ -74,6 +74,15 @@ An inline parser that embeds the parsed quantities in the text is also available
     >>> print parser.inline_parse('I want 2 liters of wine')
     I want 2 liters {Quantity(2, "litre")} of wine
 
+Training the model
+------------------
+
+.. code-block:: python
+
+    >>> from quantulum.classifier import train_classifier
+    >>> train_classifier()
+    
+This will create a new `clf.pickl` file locally 
 
 Units and entities
 ------------------
