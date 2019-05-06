@@ -2310,5 +2310,13 @@
         "URI": "https://en.wikipedia.org/wiki/Jansky",
         "dimensions": [],
         "symbols": ["mJy", "mfu", "m.f.u."]
+    },
+    {
+        "name": "pack",
+        "surfaces": ["pack"],
+        "entity": "dimensionless",
+        "URI": "https://en.wikipedia.org/wiki/Pack_(canine)",
+        "dimensions": [],
+        "symbols": ["pack"]
     }
 ]
