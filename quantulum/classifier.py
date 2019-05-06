@@ -110,8 +110,7 @@ def load_classifier():
     return obj['tfidf_model'], obj['clf'], obj['target_names']
 
 if USE_CLF:
-    pass
-    #TFIDF_MODEL, CLF, TARGET_NAMES = load_classifier()
+    TFIDF_MODEL, CLF, TARGET_NAMES = load_classifier()
 else:
     TFIDF_MODEL, CLF, TARGET_NAMES = None, None, None
 
