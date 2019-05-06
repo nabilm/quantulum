@@ -2314,7 +2314,7 @@
     {
         "name": "pack",
         "surfaces": ["pack"],
-        "entity": "pack",
+        "entity": "dimensionless",
         "URI": "https://en.wikipedia.org/wiki/Pack_(canine)",
         "dimensions": [],
         "symbols": ["pack"]
